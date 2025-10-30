@@ -236,6 +236,7 @@ Resources:
               Value: !Sub ${HotelName}-${Environment}
             - Name: DYNAMODB_ENDPOINT
               Value: "https://dynamodb.us-east-1.amazonaws.com"
+          
           LogConfiguration:
             LogDriver: awslogs
             Options:
