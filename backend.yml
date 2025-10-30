@@ -272,13 +272,12 @@ Resources:
       Description: "Hotel app URI"
       Type: String
       Value: !Sub "https://${CloudFrontDistribution.DomainName}"
-              
 
 Outputs:
   DynamoDBTableName:
     Description: "Name of the DynamoDB Table"
     Value: !Ref RoomsTable
-    ApplicationURL:
+  ApplicationURL:
     Description: "CloudFront Distribution URL"
     Value: !Sub "https://${CloudFrontDistribution.DomainName}"
   ECSClusterName:
@@ -286,4 +285,4 @@ Outputs:
     Value: !Ref ECSCluster
   ECSServiceName:
     Description: "Name of the ECS Service"
-    Value: !Ref ECSService  
+    Value: !Ref ECSService
