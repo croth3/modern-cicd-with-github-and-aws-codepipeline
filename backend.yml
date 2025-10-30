@@ -4,7 +4,7 @@ Description: CloudFormation template for Hotel App with DynamoDB and ECS.
 Parameters:
   HotelName:
     Type: String
-    Default: AWS App Runner Hotel
+    Default: AWS Hotel
     Description: Enter a name for the Hotel. Default is AWS Hotel.
   Environment:
     Type: String
@@ -233,7 +233,7 @@ Resources:
             - Name: DYNAMODB_TABLE_NAME
               Value: !Ref RoomsTable
             - Name: HOTEL_NAME
-              Value: !Ref HotelName
+              Value: "AWS App Runner Hotel"
             - Name: DYNAMODB_ENDPOINT
               Value: "https://dynamodb.us-east-1.amazonaws.com"
           
